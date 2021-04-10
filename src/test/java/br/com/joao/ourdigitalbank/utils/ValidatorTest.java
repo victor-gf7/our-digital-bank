@@ -56,11 +56,19 @@ class ValidatorTest {
     }
 
     @Test
-    void isValidEmailAddress() {
+    @DisplayName("Deveria verificar se o email esta válido")
+    void test7() {
         String validEmail = "joao@gmail.com";
-        String invalidEmail = "joao@gmhfghfhg";
 
         assertTrue(Validator.isValidEmailAddress(validEmail));
+    }
+
+    @Test
+    @DisplayName("Deveria verificar se o email não esta válido")
+    void test6() {
+        String invalidEmail = "joao@gmhfghfhg";
+
+        assertFalse(Validator.isValidEmailAddress(invalidEmail));
     }
 
     @Test
